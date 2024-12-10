@@ -7,6 +7,8 @@
 // this License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR
 // CONDITIONS OF ANY KIND, either express or implied. See the License for the
 // specific language governing permissions and limitations under the License.
+`resetall
+`timescale 1ns / 1ps
 
 `define SPI_STD     2'b00
 `define SPI_QUAD_TX 2'b01
@@ -558,3 +560,5 @@ module spi_master_controller
   assign spi_csn3 = ~spi_csreg[3] | spi_cs;
 
 endmodule
+
+`resetall
